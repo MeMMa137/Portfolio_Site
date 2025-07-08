@@ -66,7 +66,7 @@ const Home = () => {
             <h1 className="text-5xl md:text-7xl font-bold mb-4">
               <span className="text-white">Hello, I'm</span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
                 Alex Chen
               </span>
             </h1>
