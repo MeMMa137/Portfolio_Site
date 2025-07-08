@@ -86,8 +86,8 @@ const Navigation = () => {
               key={item.name}
               to={item.path}
               onClick={() => setIsOpen(false)}
-              className={`block px-3 py-2 text-base font-medium transition-all duration-200 hover:text-cyan-400 ${
-                location.pathname === item.path ? 'text-cyan-400' : 'text-gray-300'
+              className={`block px-3 py-2 text-base font-medium transition-all duration-200 hover:text-purple-400 ${
+                location.pathname === item.path ? 'text-purple-400' : 'text-gray-300'
               }`}
             >
               {item.name}
