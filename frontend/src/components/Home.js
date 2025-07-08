@@ -91,7 +91,7 @@ const Home = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="text-purple-400 mb-4">{item.icon}</div>
