@@ -13,10 +13,10 @@ const Projects = () => {
 
   const getCategoryColor = (category) => {
     const colors = {
-      'AI/ML': 'text-cyan-400',
+      'AI/ML': 'text-blue-400',
       'IoT': 'text-purple-400',
       'Security': 'text-green-400',
-      'Research': 'text-red-400'
+      'Research': 'text-pink-400'
     };
     return colors[category] || 'text-gray-400';
   };
@@ -27,7 +27,7 @@ const Projects = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
-            My <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">Projects</span>
+            My <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">Projects</span>
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             A collection of innovative projects spanning AI, IoT, security, and research
@@ -46,7 +46,7 @@ const Projects = () => {
               onClick={() => setSelectedCategory(category)}
               className={`px-6 py-2 rounded-lg font-medium transition-all duration-200 ${
                 selectedCategory === category
-                  ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg transform scale-105'
+                  ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg transform scale-105'
                   : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
               }`}
             >
@@ -60,7 +60,7 @@ const Projects = () => {
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}
-              className="group relative bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105"
+              className="group relative bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105"
               onMouseEnter={() => setHoveredProject(project.id)}
               onMouseLeave={() => setHoveredProject(null)}
               style={{ animationDelay: `${index * 0.1}s` }}
@@ -110,7 +110,7 @@ const Projects = () => {
 
               {/* Project Content */}
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200">
+                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors duration-200">
                   {project.title}
                 </h3>
                 
@@ -148,7 +148,7 @@ const Projects = () => {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-1 text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+                      className="flex items-center space-x-1 text-gray-400 hover:text-purple-400 transition-colors duration-200"
                     >
                       <Eye className="w-4 h-4" />
                       <span className="text-sm">Live Demo</span>
@@ -158,7 +158,7 @@ const Projects = () => {
               </div>
 
               {/* Hover Effect Border */}
-              <div className={`absolute inset-0 rounded-xl border-2 border-cyan-400/30 transition-all duration-300 ${
+              <div className={`absolute inset-0 rounded-xl border-2 border-purple-400/30 transition-all duration-300 ${
                 hoveredProject === project.id ? 'opacity-100 scale-105' : 'opacity-0 scale-100'
               }`} />
             </div>
@@ -167,7 +167,7 @@ const Projects = () => {
 
         {/* Call to Action */}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-cyan-400/10 to-purple-600/10 rounded-xl p-8 border border-cyan-400/20">
+          <div className="bg-gradient-to-r from-blue-400/10 to-purple-600/10 rounded-xl p-8 border border-purple-400/20">
             <h2 className="text-2xl font-bold text-white mb-4">
               Want to Collaborate?
             </h2>
@@ -175,10 +175,10 @@ const Projects = () => {
               I'm always interested in working on innovative projects and exploring new technologies.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+              <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                 Start a Project
               </button>
-              <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 transform hover:scale-105">
+              <button className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-gray-900 transition-all duration-300 transform hover:scale-105">
                 View All Projects
               </button>
             </div>

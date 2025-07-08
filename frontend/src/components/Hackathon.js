@@ -18,7 +18,7 @@ const Hackathon = () => {
     if (award.includes('1st')) return 'text-yellow-400';
     if (award.includes('2nd')) return 'text-gray-400';
     if (award.includes('3rd')) return 'text-orange-400';
-    return 'text-cyan-400';
+    return 'text-purple-400';
   };
 
   return (
@@ -27,7 +27,7 @@ const Hackathon = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
-            Hackathon <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">Journey</span>
+            Hackathon <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">Journey</span>
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Competing in hackathons to push boundaries and create innovative solutions
@@ -42,12 +42,12 @@ const Hackathon = () => {
             <div className="text-gray-400">Hackathons</div>
           </div>
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center">
-            <Award className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
+            <Award className="w-8 h-8 text-purple-400 mx-auto mb-4" />
             <div className="text-3xl font-bold text-white mb-2">8</div>
             <div className="text-gray-400">Awards Won</div>
           </div>
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center">
-            <Code className="w-8 h-8 text-purple-400 mx-auto mb-4" />
+            <Code className="w-8 h-8 text-blue-400 mx-auto mb-4" />
             <div className="text-3xl font-bold text-white mb-2">25+</div>
             <div className="text-gray-400">Technologies Used</div>
           </div>
@@ -58,7 +58,7 @@ const Hackathon = () => {
           {hackathonData.hackathons.map((hackathon, index) => (
             <div
               key={hackathon.id}
-              className="group relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-yellow-400/50 transition-all duration-300 transform hover:scale-105 cursor-pointer"
+              className="group relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105 cursor-pointer"
               onClick={() => openModal(hackathon)}
               onMouseEnter={() => setHoveredCard(hackathon.id)}
               onMouseLeave={() => setHoveredCard(null)}
@@ -75,10 +75,10 @@ const Hackathon = () => {
                   <Calendar className="w-4 h-4 text-gray-400" />
                   <span className="text-gray-400 text-sm">{hackathon.date}</span>
                 </div>
-                <h3 className="text-lg font-semibold text-cyan-400 mb-1 group-hover:text-yellow-400 transition-colors duration-200">
+                <h3 className="text-lg font-semibold text-purple-400 mb-1 group-hover:text-blue-400 transition-colors duration-200">
                   {hackathon.event}
                 </h3>
-                <h4 className="text-xl font-bold text-white group-hover:text-yellow-100 transition-colors duration-200">
+                <h4 className="text-xl font-bold text-white group-hover:text-purple-100 transition-colors duration-200">
                   {hackathon.project}
                 </h4>
               </div>
@@ -106,7 +106,7 @@ const Hackathon = () => {
               <div className={`absolute bottom-4 right-4 transition-all duration-300 ${
                 hoveredCard === hackathon.id ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'
               }`}>
-                <ExternalLink className="w-5 h-5 text-yellow-400" />
+                <ExternalLink className="w-5 h-5 text-purple-400" />
               </div>
             </div>
           ))}
@@ -114,14 +114,14 @@ const Hackathon = () => {
 
         {/* Call to Action */}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-yellow-400/10 to-orange-600/10 rounded-xl p-8 border border-yellow-400/20">
+          <div className="bg-gradient-to-r from-blue-400/10 to-purple-600/10 rounded-xl p-8 border border-purple-400/20">
             <h2 className="text-2xl font-bold text-white mb-4">
               Ready to Collaborate?
             </h2>
             <p className="text-gray-300 mb-6">
               I'm always looking for exciting hackathons and innovative projects to work on.
             </p>
-            <button className="bg-gradient-to-r from-yellow-400 to-orange-600 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:from-yellow-500 hover:to-orange-700 transition-all duration-300 transform hover:scale-105">
+            <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
               Let's Build Something Amazing
             </button>
           </div>
@@ -177,7 +177,7 @@ const Hackathon = () => {
               </div>
               
               <div className="flex space-x-4">
-                <button className="bg-yellow-500 text-gray-900 px-6 py-2 rounded-lg hover:bg-yellow-600 transition-colors duration-200 font-semibold">
+                <button className="bg-purple-500 text-white px-6 py-2 rounded-lg hover:bg-purple-600 transition-colors duration-200 font-semibold">
                   View Project
                 </button>
                 <button className="border border-gray-600 text-gray-300 px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors duration-200">

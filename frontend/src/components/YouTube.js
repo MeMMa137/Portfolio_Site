@@ -20,7 +20,7 @@ const YouTube = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
-            YouTube <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-purple-600">Channel</span>
+            YouTube <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">Channel</span>
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Sharing knowledge through tutorials, project walkthroughs, and tech insights
@@ -32,7 +32,7 @@ const YouTube = () => {
           {youtubeData.videos.map((video, index) => (
             <div
               key={video.id}
-              className="group relative bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-red-500/50 transition-all duration-300 transform hover:scale-105 cursor-pointer"
+              className="group relative bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 cursor-pointer"
               onClick={() => openModal(video)}
               onMouseEnter={() => setHoveredVideo(video.id)}
               onMouseLeave={() => setHoveredVideo(null)}
@@ -50,7 +50,7 @@ const YouTube = () => {
                 <div className={`absolute inset-0 bg-black/30 flex items-center justify-center transition-all duration-300 ${
                   hoveredVideo === video.id ? 'opacity-100' : 'opacity-0'
                 }`}>
-                  <div className="bg-red-500 rounded-full p-4 transform transition-all duration-300 hover:scale-110">
+                  <div className="bg-purple-500 rounded-full p-4 transform transition-all duration-300 hover:scale-110">
                     <Play className="w-8 h-8 text-white fill-current" />
                   </div>
                 </div>
@@ -63,7 +63,7 @@ const YouTube = () => {
 
               {/* Video Info */}
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-2 line-clamp-2 group-hover:text-red-400 transition-colors duration-200">
+                <h3 className="text-xl font-semibold text-white mb-2 line-clamp-2 group-hover:text-purple-400 transition-colors duration-200">
                   {video.title}
                 </h3>
                 
@@ -92,11 +92,11 @@ const YouTube = () => {
           <h2 className="text-2xl font-semibold text-white mb-6 text-center">Channel Statistics</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="text-3xl font-bold text-red-500 mb-2">50K+</div>
+              <div className="text-3xl font-bold text-purple-500 mb-2">50K+</div>
               <div className="text-gray-400">Subscribers</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">1M+</div>
+              <div className="text-3xl font-bold text-blue-400 mb-2">1M+</div>
               <div className="text-gray-400">Total Views</div>
             </div>
             <div className="text-center">
@@ -104,7 +104,7 @@ const YouTube = () => {
               <div className="text-gray-400">Videos</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-green-500 mb-2">95%</div>
+              <div className="text-3xl font-bold text-blue-500 mb-2">95%</div>
               <div className="text-gray-400">Like Ratio</div>
             </div>
           </div>
@@ -152,7 +152,7 @@ const YouTube = () => {
               </p>
               
               <div className="mt-6 flex space-x-4">
-                <button className="bg-red-500 text-white px-6 py-2 rounded-lg hover:bg-red-600 transition-colors duration-200">
+                <button className="bg-purple-500 text-white px-6 py-2 rounded-lg hover:bg-purple-600 transition-colors duration-200">
                   Watch on YouTube
                 </button>
                 <button className="border border-gray-600 text-gray-300 px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors duration-200">
