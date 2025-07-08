@@ -60,7 +60,7 @@ const Navigation = () => {
           <div className="flex items-center space-x-4">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-md text-gray-300 hover:text-cyan-400 transition-colors duration-200"
+              className="p-2 rounded-md text-gray-300 hover:text-purple-400 transition-colors duration-200"
             >
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
             </button>
