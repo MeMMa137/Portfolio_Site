@@ -69,7 +69,7 @@ const Navigation = () => {
             <div className="md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="p-2 rounded-md text-gray-300 hover:text-cyan-400 transition-colors duration-200"
+                className="p-2 rounded-md text-gray-300 hover:text-purple-400 transition-colors duration-200"
               >
                 {isOpen ? <X size={20} /> : <Menu size={20} />}
               </button>
