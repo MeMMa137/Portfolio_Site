@@ -47,7 +47,7 @@ const Home = () => {
           {[...Array(20)].map((_, i) => (
             <div
               key={i}
-              className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-pulse"
+              className="absolute w-1 h-1 bg-purple-400 rounded-full animate-pulse"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
